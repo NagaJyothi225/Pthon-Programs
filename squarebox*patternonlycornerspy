@@ -1,0 +1,9 @@
+for i in range(6):
+    for j in range(6):
+        if i in{0,5}and j in{0,1,2,3,4,5}:
+            print("*",end=' ')
+        elif i in{1,2,3,4} and j in {0,5}:
+             print("*",end=' ')
+        else:
+             print(" ",end=' ')
+    print()        
