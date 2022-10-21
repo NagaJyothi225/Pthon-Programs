@@ -1,0 +1,9 @@
+import array as arr
+number=arr.array('I',[1,2,3,4,5])
+print(number)
+del number[2]
+print(number)
+number.remove(5)
+print(number)
+number.pop(0)
+print(number)
