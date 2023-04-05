@@ -1,0 +1,9 @@
+/* This is student table */
+SQL> create table student (id number(2),name varchar2(10),addres varchar2(10));
+SQL> Table created.
+SQL> desc student10;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 NUMBER(2)
+ NAME                                               VARCHAR2(10)
+ ADDRES                                             VARCHAR2(10)
