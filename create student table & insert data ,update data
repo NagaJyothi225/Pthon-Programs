@@ -1,0 +1,64 @@
+/* This is student10 table */
+SQL> create table student (id number(2),name varchar2(10),addres varchar2(10));
+SQL> Table created.
+
+SQL> desc student10;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 NUMBER(2)
+ NAME                                               VARCHAR2(10)
+ ADDRES                                             VARCHAR2(10)
+
+3 Methods insert:-
+------------------
+ 1.Method
+    SQL> insert into student10 values(1,'Indra','hyd');
+
+    1 row created.
+  2.Method
+     SQL> insert into student10 values(&id,&name,&addres);
+     Enter value for id: 2
+     Enter value for name: 'jyo'
+     Enter value for addres: 'bangalor'
+     old   1: insert into student10 values(&id,&name,&addres)
+     new   1: insert into student10 values(2,'jyo','bangalor')
+
+     1 row created.
+
+     SQL> /
+     Enter value for id: 3
+     Enter value for name: 'naga'
+     Enter value for addres: 'chennai'
+     old   1: insert into student10 values(&id,&name,&addres)
+     new   1: insert into student10 values(3,'naga','chennai')
+
+     1 row created.
+     
+ 3.Method is skiping values:-
+      SQL> insert into student10(id,name) values(4,'nagajyothi');
+
+      1 row created.
+
+      SQL> select * from student10;
+
+                  ID NAME       ADDRES
+               ---------- ---------- ----------
+                   1 Indra      hyd
+                   2 jyo        bangalor
+                   3 naga       chennai
+                   4 nagajyothi    ---
+                   
+Update:-     
+========  
+       SQL> update student10 set addres='ptr' where id=4;
+
+      1 row updated.
+
+     SQL> select * from student10;
+
+        ID NAME       ADDRES
+---------- ---------- ----------
+         1 Indra      hyd
+         2 jyo        bangalor
+         3 naga       chennai
+         4 nagajyothi ptr
