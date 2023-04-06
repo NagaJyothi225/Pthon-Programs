@@ -1,0 +1,83 @@
+                  Alter Command
+                  =============
+4 types of alters:-
+----------------- 
+1.alter with add
+2.alter with modify
+3.alter with drop
+4.alter with rename
+
+SQL> select * from student10;
+
+        ID NAME       ADDRES
+---------- ---------- ----------
+         1 Indra      hyd
+         2 jyo        bangalor
+         3 naga       chennai
+         4 nagajyothi ptr
+         
+         
+1.alter with add:-
+================
+SQL> alter table student10 add marks number(3);
+
+Table altered.
+SQL> select * from student10;
+
+        ID NAME       ADDRES          MARKS
+---------- ---------- ---------- ----------
+         1 Indra      hyd
+         2 jyo        bangalor
+         3 naga       chennai
+         4 nagajyothi ptr
+ 
+ 2.Alter with modify
+ ==================
+ SQL> desc student10;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 NUMBER(2)
+ NAME                                               VARCHAR2(10)
+ ADDRES                                             VARCHAR2(10)
+ SQL> alter table student10 modify (id number(5));
+
+Table altered.
+
+SQL> desc student10;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ID                                                 NUMBER(5) 
+ NAME                                               VARCHAR2(10)
+ ADDRES                                             VARCHAR2(10)
+ MARKS                                              NUMBER(3)
+
+3.alter with drop:-
+==================
+
+ SQL> alter table student10 drop column marks;
+
+Table altered.
+
+SQL> select * from student10;
+
+        ID NAME       ADDRES
+---------- ---------- ----------
+         1 Indra      hyd
+         2 jyo        bangalor
+         3 naga       chennai
+         4 nagajyothi ptr
+         
+ 4.alter with rename:-
+ =====================s
+ SQL> alter table student10 rename column addres to addr;
+
+Table altered.
+
+SQL> select * from student10;
+
+        ID NAME       ADDR
+---------- ---------- ----------
+         1 Indra      hyd
+         2 jyo        bangalor
+         3 naga       chennai
+         4 nagajyothi ptr
